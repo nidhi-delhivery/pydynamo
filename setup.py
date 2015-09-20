@@ -3,11 +3,14 @@ from setuptools import setup
 setup(
     name = 'pydynamo',
     packages = ['pydynamo'],
-    version = '0.1.1',
+    py_modules = ['pydynamo'],
+    version = '0.1.3',
     description = 'Python library for communicating with dynamo db !',
     author='Nidhi Mittal',
     author_email='mittalnidhi.mittal@gmail.com',
-    url='https://github.com/nidhi-delhivery/pydynamo',
+    url='http://github.com/nidhi-delhivery/pydynamo',
+    license='LICENSE.txt',
+    include_package_data=True,
     classifiers=[
         'Programming Language :: Python',
         'Programming Language :: Python :: 2.7',
@@ -17,5 +20,9 @@ setup(
         'Environment :: Console',
         'Intended Audience :: Science/Research',
         'Topic :: Scientific/Engineering :: GIS'
-    ]
+    ],
+    install_requires=[
+        "Django >= 1.4",
+        "boto == 2.2",
+    ],
 )
